@@ -13,7 +13,7 @@ const levels = {
 const logger = winston.createLogger({
     format: winston.format.combine(
         winston.format.label({
-            label: "order-service"
+            label: "foo-service"
         }),
         winston.format.timestamp(),
         winston.format.splat(),

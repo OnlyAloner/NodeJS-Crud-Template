@@ -39,26 +39,26 @@ main();
 
 let id;
 
-storage.create({foo: "Lol it is foo"}).then((res) => {
-    id = res.id;
-    console.log(res, "success")
-    storage.getSingle({id: id}).then((res) => {
-        console.log(res, "success")
-        storage.getSingle({foo: "Lol it is not foo"}).then((res) => {
-            console.log(res, "success")
-            storage.update({id: id, foo: "Lol it is not foo", stringField: "Is I am a string?", numberField: 5}).then((res) => {
-                console.log(res, "success")
-                storage.getSingle({stringField: "Is I am a string?"}).then((res) => {
-                    console.log(res, "success")
-                    storage.getList({filters: {foo: "Lol it is not foo", numberField: 4}, fields: ['foo']}).then((res) => {
-                        console.log(res, "success")
-                        storage.delete({id: id}).then((res) => {
-                            console.log(res, "success")
-                        })
-                    })
-                })
-            })
-        })
-    })
-})
+// storage.create({foo: "Lol it is foo"}).then((res) => {
+//     id = res.id;
+//     console.log(res, "success")
+//     storage.getSingle({id: id}).then((res) => {
+//         console.log(res, "success")
+//         storage.getSingle({foo: "Lol it is not foo"}).then((res) => {
+//             console.log(res, "success")
+//             storage.update({id: id, foo: "Lol it is not foo", stringField: "Is I am a string?", numberField: 5}).then((res) => {
+//                 console.log(res, "success")
+//                 storage.getSingle({stringField: "Is I am a string?"}).then((res) => {
+//                     console.log(res, "success")
+//                     storage.getList({filters: {foo: "Lol it is not foo", numberField: 4}, fields: ['foo']}).then((res) => {
+//                         console.log(res, "success")
+//                         storage.delete({id: id}).then((res) => {
+//                             console.log(res, "success")
+//                         })
+//                     })
+//                 })
+//             })
+//         })
+//     })
+// })
 

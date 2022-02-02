@@ -1,6 +1,7 @@
 const FooModel = require("../../models/foo");
 const catchWrapDb = require("../../utils/catchWrapDb")
 const cfg = require("../../config/index.js")
+const logger = require("../../config/logger")
 
 const NAMESPACE = "Storage.Foo";
 
@@ -25,7 +26,7 @@ let fooStorage = {
 
         let foo = await query.exec();
 
-        if (!foo) {throw new Error(`failed to find foo with given ${firstKey}: ${args[firstKey]}`)};
+        if (!foo) {logger.error(`failed to find foo with given ${firstKey}: ${args[firstKey]}`)};
 
         return foo;
     }),

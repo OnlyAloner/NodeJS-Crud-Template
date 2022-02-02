@@ -6,8 +6,8 @@ const config = {
     mongoPassword: getConf("MONGO_PASSWORD", "foo"),
     mongoDatabase: getConf("MONGO_DATABASE", "foo"),
 
-    fooHost: getConf("WAREHOUSE_SERVICE_HOST", "localhost"),
-    fooPort: getConf("WAREHOUSE_SERVICE_PORT", "9101"),
+    fooHost: getConf("FOO_SERVICE_HOST", "localhost"),
+    fooPort: getConf("FOO_SERVICE_PORT", "9101"),
 
     RPCPort: getConf("RPC_PORT", 8080),
     limit: getConf("DEFAULT_LIMIT", 10),
